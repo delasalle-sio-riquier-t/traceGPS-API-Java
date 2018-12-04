@@ -52,7 +52,8 @@ public class UtilisateurTest {
 
 	@Test
 	public void testSetPseudo() {
-		fail("Not yet implemented");
+		utilisateur1.setPseudo("Bob");
+		assertEquals("Test setPseudo", "Bob", utilisateur1.getPseudo());
 	}
 
 	@Test
