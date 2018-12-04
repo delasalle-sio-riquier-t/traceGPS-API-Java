@@ -68,14 +68,12 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetAdrMail() {
-		assertEquals("Test getAdrMail", "", utilisateur1.getAdrMail());
-		assertEquals("Test getAdrMail", "toto@free.fr", utilisateur2.getAdrMail());
+		fail("Not yet implemented");
 	}
 
 	@Test
 	public void testSetAdrMail() {
-		utilisateur1.setAdrMail("riquier.thomas35@gmail.com");
-		assertEquals("Test setAdrMail", "riquier.thomas35@gmail.com", utilisateur1.getAdrMail());
+		fail("Not yet implemented");
 	}
 
 	@Test
@@ -115,7 +113,8 @@ public class UtilisateurTest {
 
 	@Test
 	public void testSetNbTraces() {
-		fail("Not yet implemented");
+		utilisateur1.setNbTraces(5);
+		assertEquals("Test setNbTraces", "5", utilisateur1.getNbTraces());
 	}
 
 	@Test
