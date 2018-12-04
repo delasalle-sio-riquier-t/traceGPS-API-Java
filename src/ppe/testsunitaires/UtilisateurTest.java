@@ -64,12 +64,14 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetAdrMail() {
-		fail("Not yet implemented");
+		assertEquals("Test getAdrMail", "", utilisateur1.getAdrMail());
+		assertEquals("Test getAdrMail", "toto@free.fr", utilisateur2.getAdrMail());
 	}
 
 	@Test
 	public void testSetAdrMail() {
-		fail("Not yet implemented");
+		utilisateur1.setAdrMail("riquier.thomas35@gmail.com");
+		assertEquals("Test setAdrMail", "riquier.thomas35@gmail.com", utilisateur1.getAdrMail());
 	}
 
 	@Test
