@@ -58,7 +58,7 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetMdpSha1() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
@@ -68,12 +68,14 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetAdrMail() {
-		fail("Not yet implemented");
+		assertEquals("Test getAdrMail", "", utilisateur1.getAdrMail());
+		assertEquals("Test getAdrMail", "toto@free.fr", utilisateur2.getAdrMail());
 	}
 
 	@Test
 	public void testSetAdrMail() {
-		fail("Not yet implemented");
+		utilisateur1.setAdrMail("vincentlf56@gmail.com");
+		assertEquals("Test SetAdrMail", "vincentlf56@gmail.com", utilisateur1.getAdrMail());
 	}
 
 	@Test
