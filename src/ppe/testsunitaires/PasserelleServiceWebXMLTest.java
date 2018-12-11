@@ -29,6 +29,7 @@ public class PasserelleServiceWebXMLTest {
 //		msg = PasserelleServicesWebXML.connecter("europa", Outils.sha1("mdputilisateur"));
 //		assertEquals("Utilisateur authentifié.", msg);	
 //	}
+
 		
 //	@Test
 //	public void testCreerUnUtilisateur() {
@@ -168,6 +169,7 @@ public class PasserelleServiceWebXMLTest {
 //		fail("Not yet implemented");
 //	}
 	
+
 //	@Test
 //	public void testSupprimerUnUnParcours() {
 //		String msg = PasserelleServicesWebXML.supprimerUnParcours("europa", Outils.sha1("mdputilisateurrrrrr"), 10);
