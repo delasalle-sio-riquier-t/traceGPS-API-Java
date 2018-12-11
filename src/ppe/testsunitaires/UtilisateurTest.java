@@ -34,14 +34,14 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetId() {
-		assertEquals("Test getId", "", utilisateur1.getId());
-		assertEquals("Test getId", "111", utilisateur2.getId());	
+		assertEquals("Test getId", 0 , utilisateur1.getId());
+		assertEquals("Test getId", 111, utilisateur2.getId());	
 	}
 
 	@Test
 	public void testSetId() {
 		utilisateur1.setId(112);
-		assertEquals("Test setId", "112", utilisateur1.getId());
+		assertEquals("Test setId", 112, utilisateur1.getId());
 	}
 
 	@Test
@@ -101,7 +101,8 @@ public class UtilisateurTest {
 
 	@Test
 	public void testSetNiveau() {
-		fail("Not yet implemented");
+		utilisateur1.setNiveau(1);
+		assertEquals("Test setNiveau", 1, utilisateur1.getNiveau());
 	}
 
 	@Test
@@ -122,7 +123,7 @@ public class UtilisateurTest {
 	@Test
 	public void testSetNbTraces() {
 		utilisateur1.setNbTraces(5);
-		assertEquals("Test setNbTraces", "5", utilisateur1.getNbTraces());
+		assertEquals("Test setNbTraces", 5, utilisateur1.getNbTraces());
 	}
 
 	@Test
