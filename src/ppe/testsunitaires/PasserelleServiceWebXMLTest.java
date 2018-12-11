@@ -102,20 +102,20 @@ public class PasserelleServiceWebXMLTest {
 //	}
 
 	
-	@Test
-	public void testDemanderUneAutorisation() {
-		String msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "", "");
-		assertEquals("Erreur : données incomplètes.", msg);
-
-		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "coucou", "charles-edouard");
-		assertEquals("Erreur : authentification incorrecte.", msg);
-		
-		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "toto", "coucou", "charles-edouard");
-		assertEquals("Erreur : pseudo utilisateur inexistant.", msg);
-		
-		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "galileo", "coucou", "charles-edouard");
-		assertEquals("galileo va recevoir un courriel avec votre demande.", msg);	
-	}
+//	@Test
+//	public void testDemanderUneAutorisation() {
+//		String msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "", "");
+//		assertEquals("Erreur : données incomplètes.", msg);
+//
+//		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "coucou", "charles-edouard");
+//		assertEquals("Erreur : authentification incorrecte.", msg);
+//		
+//		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "toto", "coucou", "charles-edouard");
+//		assertEquals("Erreur : pseudo utilisateur inexistant.", msg);
+//		
+//		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "galileo", "coucou", "charles-edouard");
+//		assertEquals("galileo va recevoir un courriel avec votre demande.", msg);	
+//	}
 
 	
 //	@Test
@@ -161,13 +161,36 @@ public class PasserelleServiceWebXMLTest {
 
 //	@Test
 //	public void testDemarrerEnregistrementParcours() {
-//		fail("Not yet implemented");
+//		Trace laTrace = new Trace();
+//		String msg = PasserelleServicesWebXML.demarrerEnregistrementParcours("europa", Outils.sha1("mdputilisateurrrrrr"), laTrace);
+//		assertEquals("Erreur : authentification incorrecte.", msg);
+//		
+//		laTrace = new Trace();
+//		msg = PasserelleServicesWebXML.demarrerEnregistrementParcours("europa", Outils.sha1("mdputilisateur"), laTrace);
+//		assertEquals("Trace créée.", msg);	
 //	}
-//
+
+
 //	@Test
 //	public void testArreterEnregistrementParcours() {
-//		fail("Not yet implemented");
+//		String msg;
+//
+//		msg = PasserelleServicesWebXML.arreterEnregistrementParcours("europa", Outils.sha1("mdputilisateurrrrrr"), 23);
+//		assertEquals("Erreur : authentification incorrecte.", msg);
+//		
+//		msg = PasserelleServicesWebXML.arreterEnregistrementParcours("europa", Outils.sha1("mdputilisateur"), 230);
+//		assertEquals("Erreur : parcours inexistant.", msg);
+//		
+//		msg = PasserelleServicesWebXML.arreterEnregistrementParcours("europa", Outils.sha1("mdputilisateur"), 5);
+//		assertEquals("Erreur : le numéro de trace ne correspond pas à cet utilisateur.", msg);
+//		
+//		msg = PasserelleServicesWebXML.arreterEnregistrementParcours("europa", Outils.sha1("mdputilisateur"), 4);
+//		assertEquals("Erreur : cette trace est déjà terminée.", msg);	
+//		
+//		msg = PasserelleServicesWebXML.arreterEnregistrementParcours("oxygen", Outils.sha1("mdputilisateur"), 21);
+//		assertEquals("Enregistrement terminé.", msg);	
 //	}
+
 	
 
 //	@Test
@@ -178,7 +201,7 @@ public class PasserelleServiceWebXMLTest {
 //		msg = PasserelleServicesWebXML.supprimerUnParcours("europa", Outils.sha1("mdputilisateur"), 100);
 //		assertEquals("Erreur : parcours inexistant.", msg);
 //		
-//		msg = PasserelleServicesWebXML.supprimerUnParcours("europa", Outils.sha1("mdputilisateur"), 22);
+//		msg = PasserelleServicesWebXML.supprimerUnParcours("europa", Outils.sha1("mdputilisateur"), 21);
 //		assertEquals("Erreur : vous n'êtes pas le propriétaire de ce parcours.", msg);	
 //		
 //		msg = PasserelleServicesWebXML.supprimerUnParcours("europa", Outils.sha1("mdputilisateur"), 30);
