@@ -34,14 +34,14 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetId() {
-		assertEquals("Test getId", "", utilisateur1.getId());
-		assertEquals("Test getId", "111", utilisateur2.getId());	
+		assertEquals("Test getId", 0, utilisateur1.getId());
+		assertEquals("Test getId", 111, utilisateur2.getId());	
 	}
 
 	@Test
 	public void testSetId() {
 		utilisateur1.setId(112);
-		assertEquals("Test setId", "112", utilisateur1.getId());
+		assertEquals("Test setId", 112, utilisateur1.getId());
 	}
 
 	@Test
@@ -92,7 +92,8 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetNiveau() {
-		fail("Not yet implemented");
+		assertEquals("Test getNiveau", 0, utilisateur1.getNiveau());
+		assertEquals("Test getNiveau", 1, utilisateur2.getNiveau());
 	}
 
 	@Test
@@ -101,34 +102,40 @@ public class UtilisateurTest {
 	}
 
 	@Test
-	public void testGetDateCreation() {
-		fail("Not yet implemented");
+	public void testGetDateCreation() throws ParseException {
+		assertNull("Test GetDateCreation", utilisateur1.getDateDerniereTrace());
+		assertEquals("Test GetDateCreation", Outils.convertirEnDateHeure("21/06/2016 14:00:00"), utilisateur2.getDateDerniereTrace());
 	}
 
 	@Test
 	public void testSetDateCreation() throws ParseException {
-		fail("Not yet implemented");
+		utilisateur1.setDateCreation(Outils.convertirEnDateHeure("28/06/2018 14:00:00"));
+		assertEquals("Test GetNbTraces", Outils.convertirEnDateHeure("28/06/2018 14:00:00"), utilisateur2.getNbTraces());
 	}
 
 	@Test
 	public void testGetNbTraces() {
-		fail("Not yet implemented");
+		assertEquals("Test GetNbTraces", 0, utilisateur1.getNbTraces());
+		assertEquals("Test GetNbTraces", 3, utilisateur2.getNbTraces());
 	}
 
 	@Test
 	public void testSetNbTraces() {
 		utilisateur1.setNbTraces(5);
-		assertEquals("Test setNbTraces", "5", utilisateur1.getNbTraces());
+		assertEquals("Test setNbTraces", 5, utilisateur1.getNbTraces());
 	}
 
 	@Test
-	public void testGetDateDerniereTrace() {
-		fail("Not yet implemented");
+	public void testGetDateDerniereTrace() throws ParseException {
+		assertNull("Test GetDateDerniereTrace", utilisateur1.getDateDerniereTrace());
+		assertEquals("Test GetDateDerniereTrace", Outils.convertirEnDateHeure("28/06/2016 14:00:00"), utilisateur2.getDateDerniereTrace());
+
 	}
 
 	@Test
 	public void testSetDateDerniereTrace() throws ParseException {
-		fail("Not yet implemented");
+		utilisateur1.setDateDerniereTrace(Outils.convertirEnDateHeure("04/12/2018 17:00:00"));
+		assertEquals("Test GetDateDerniereTrace", Outils.convertirEnDateHeure("04/12/2018 17:00:00"), utilisateur1.getDateDerniereTrace());
 	}
 
 	@Test
