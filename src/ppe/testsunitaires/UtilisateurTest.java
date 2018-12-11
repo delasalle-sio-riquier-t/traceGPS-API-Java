@@ -107,14 +107,14 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetDateCreation() throws ParseException {
-		assertNull("Test GetDateCreation", utilisateur1.getDateDerniereTrace());
-		assertEquals("Test GetDateCreation", Outils.convertirEnDateHeure("21/06/2016 14:00:00"), utilisateur2.getDateDerniereTrace());
+		assertNull("Test GetDateCreation", utilisateur1.getDateCreation());
+		assertEquals("Test GetDateCreation", Outils.convertirEnDateHeure("21/06/2016 14:00:00"), utilisateur2.getDateCreation());
 	}
 
 	@Test
 	public void testSetDateCreation() throws ParseException {
 		utilisateur1.setDateCreation(Outils.convertirEnDateHeure("28/06/2018 14:00:00"));
-		assertEquals("Test GetNbTraces", Outils.convertirEnDateHeure("28/06/2018 14:00:00"), utilisateur2.getNbTraces());
+		assertEquals("Test GetNbTraces", Outils.convertirEnDateHeure("28/06/2018 14:00:00"), utilisateur1.getDateCreation());
 	}
 
 	@Test
