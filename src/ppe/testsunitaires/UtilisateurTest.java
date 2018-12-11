@@ -34,7 +34,7 @@ public class UtilisateurTest {
 
 	@Test
 	public void testGetId() {
-		assertEquals("Test getId", 0, utilisateur1.getId());
+		assertEquals("Test getId", 0 , utilisateur1.getId());
 		assertEquals("Test getId", 111, utilisateur2.getId());	
 	}
 
@@ -102,7 +102,8 @@ public class UtilisateurTest {
 
 	@Test
 	public void testSetNiveau() {
-		fail("Not yet implemented");
+		utilisateur1.setNiveau(1);
+		assertEquals("Test setNiveau", 1, utilisateur1.getNiveau());
 	}
 
 	@Test
