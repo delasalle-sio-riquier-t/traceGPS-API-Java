@@ -310,7 +310,7 @@ public class PasserelleServicesWebXML extends PasserelleXML {
 					<dateDerniereTrace>2018-01-19 13:08:48</dateDerniereTrace>
 				</utilisateur>
 			 */
-
+	
 			// vider d'abord la collection avant de la remplir
 			lesUtilisateurs.clear();
 
