@@ -18,6 +18,7 @@ import ppe.classes.Utilisateur;
 
 public class PasserelleServiceWebXMLTest {
 	
+
 //	@Test
 //	public void testConnecter() {
 //		String msg = PasserelleServicesWebXML.connecter("admin", "adminnnnnnnn");
@@ -29,8 +30,7 @@ public class PasserelleServiceWebXMLTest {
 //		msg = PasserelleServicesWebXML.connecter("europa", Outils.sha1("mdputilisateur"));
 //		assertEquals("Utilisateur authentifié.", msg);	
 //	}
-
-		
+//		
 //	@Test
 //	public void testCreerUnUtilisateur() {
 //		String msg = PasserelleServicesWebXML.creerUnUtilisateur("jim", "delasalle.sio.eleves@gmail.com", "1122334455");
@@ -52,7 +52,7 @@ public class PasserelleServiceWebXMLTest {
 //		assertEquals("Erreur : pseudo trop court (8 car minimum) ou déjà existant.", msg);	
 //
 //	}
-	
+//	
 //	@Test
 //	public void testSupprimerUnUtilisateur() {
 //		String msg;
@@ -74,8 +74,8 @@ public class PasserelleServiceWebXMLTest {
 //		msg = PasserelleServicesWebXML.supprimerUnUtilisateur("admin", Outils.sha1("mdpadmin"), "turlututu");
 //		assertEquals("Suppression effectuée ; un courriel va être envoyé à l'utilisateur.", msg);	
 //	}
-
-	
+//
+//	
 //	@Test
 //	public void testChangerDeMdp() {
 //		String msg = PasserelleServicesWebXML.changerDeMdp("europa", Outils.sha1("mdputilisateur"), "passepasse", "passepassepasse");
@@ -135,8 +135,38 @@ public class PasserelleServiceWebXMLTest {
 //		msg = PasserelleServicesWebXML.retirerUneAutorisation("neon", Outils.sha1("mdputilisateur"), "photon", "");
 //		assertEquals("Autorisation supprimée.", msg);
 //	}
-//
+
+//	@Test
+//	public void testgetUnParcoursEtSesPoints() {
+//		String msg;
 //	
+//		// test visuel de la méthode getUnParcoursEtSesPoints
+//		Trace laTrace = new Trace();
+//		msg = PasserelleServicesWebXML.getUnParcoursEtSesPoints("europa", Outils.sha1("mdputilisateur"), 2, laTrace);
+//		// affichage de la réponse
+//		System.out.println(msg);
+//		// affichage de la trace
+//		System.out.println(laTrace.toString());
+//	}
+	
+//	@Test
+//	public void testgetLesParcoursDunUtilisateur() {
+//		
+//		String msg;
+//		
+//		// test visuel de la méthode getLesParcoursDunUtilisateur
+//		ArrayList<Trace> lesTraces = new ArrayList<Trace>();
+//		msg = PasserelleServicesWebXML.getLesParcoursDunUtilisateur("europa", Outils.sha1("mdputilisateur"), "callisto", lesTraces);
+//		// affichage de la réponse
+//		System.out.println(msg);
+//		// affichage du nombre de traces
+//		System.out.println("Nombre de traces : " + lesTraces.size());
+//		// affichage de tous les utilisateurs
+//		for (Trace uneTrace : lesTraces)
+//		{	System.out.println(uneTrace.toString());
+//		}
+//	}
+	
 //	@Test
 //	public void testEnvoyerPosition() throws ParseException {
 //	Date laDate = Outils.convertirEnDateHeure("24/01/2018 13:42:21");
@@ -163,12 +193,11 @@ public class PasserelleServiceWebXMLTest {
 //	public void testDemarrerEnregistrementParcours() {
 //		fail("Not yet implemented");
 //	}
-//
+
 //	@Test
 //	public void testArreterEnregistrementParcours() {
 //		fail("Not yet implemented");
 //	}
-	
 
 //	@Test
 //	public void testSupprimerUnUnParcours() {
@@ -185,37 +214,6 @@ public class PasserelleServiceWebXMLTest {
 //		assertEquals("Parcours supprimé.", msg);	
 //	}
 
-	@Test
-	public void testgetUnParcoursEtSesPoints() {
-	String msg;
 
-	// test visuel de la méthode getUnParcoursEtSesPoints
-	Trace laTrace = new Trace();
-	msg = PasserelleServicesWebXML.getUnParcoursEtSesPoints("europa", Outils.sha1("mdputilisateur"), 2, laTrace);
-	// affichage de la réponse
-	System.out.println(msg);
-	// affichage de la trace
-	System.out.println(laTrace.toString());
-	
-	}
-	
-	@Test
-	public void testgetLesParcoursDunUtilisateur() {
-		
-		String msg;
-		
-		// test visuel de la méthode getLesParcoursDunUtilisateur
-		ArrayList<Trace> lesTraces = new ArrayList<Trace>();
-		msg = PasserelleServicesWebXML.getLesParcoursDunUtilisateur("europa", Outils.sha1("mdputilisateur"), "callisto", lesTraces);
-		// affichage de la réponse
-		System.out.println(msg);
-		// affichage du nombre de traces
-		System.out.println("Nombre de traces : " + lesTraces.size());
-		// affichage de tous les utilisateurs
-		for (Trace uneTrace : lesTraces)
-		{	System.out.println(uneTrace.toString());
-		}
 
-	}
-	
 } // fin du test
