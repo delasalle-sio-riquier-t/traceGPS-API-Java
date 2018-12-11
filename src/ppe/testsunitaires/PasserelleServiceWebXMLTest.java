@@ -102,20 +102,20 @@ public class PasserelleServiceWebXMLTest {
 //	}
 
 	
-	@Test
-	public void testDemanderUneAutorisation() {
-		String msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "", "");
-		assertEquals("Erreur : données incomplètes.", msg);
-
-		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "coucou", "charles-edouard");
-		assertEquals("Erreur : authentification incorrecte.", msg);
-		
-		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "toto", "coucou", "charles-edouard");
-		assertEquals("Erreur : pseudo utilisateur inexistant.", msg);
-		
-		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "galileo", "coucou", "charles-edouard");
-		assertEquals("galileo va recevoir un courriel avec votre demande.", msg);	
-	}
+//	@Test
+//	public void testDemanderUneAutorisation() {
+//		String msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "", "");
+//		assertEquals("Erreur : données incomplètes.", msg);
+//
+//		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateurrrrrr"), "toto", "coucou", "charles-edouard");
+//		assertEquals("Erreur : authentification incorrecte.", msg);
+//		
+//		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "toto", "coucou", "charles-edouard");
+//		assertEquals("Erreur : pseudo utilisateur inexistant.", msg);
+//		
+//		msg = PasserelleServicesWebXML.demanderUneAutorisation("europa", Outils.sha1("mdputilisateur"), "galileo", "coucou", "charles-edouard");
+//		assertEquals("galileo va recevoir un courriel avec votre demande.", msg);	
+//	}
 
 	
 //	@Test
@@ -185,5 +185,37 @@ public class PasserelleServiceWebXMLTest {
 //		assertEquals("Parcours supprimé.", msg);	
 //	}
 
+	@Test
+	public void testgetUnParcoursEtSesPoints() {
+	String msg;
+
+	// test visuel de la méthode getUnParcoursEtSesPoints
+	Trace laTrace = new Trace();
+	msg = PasserelleServicesWebXML.getUnParcoursEtSesPoints("europa", Outils.sha1("mdputilisateur"), 2, laTrace);
+	// affichage de la réponse
+	System.out.println(msg);
+	// affichage de la trace
+	System.out.println(laTrace.toString());
+	
+	}
+	
+	@Test
+	public void testgetLesParcoursDunUtilisateur() {
+		
+		String msg;
+		
+		// test visuel de la méthode getLesParcoursDunUtilisateur
+		ArrayList<Trace> lesTraces = new ArrayList<Trace>();
+		msg = PasserelleServicesWebXML.getLesParcoursDunUtilisateur("europa", Outils.sha1("mdputilisateur"), "callisto", lesTraces);
+		// affichage de la réponse
+		System.out.println(msg);
+		// affichage du nombre de traces
+		System.out.println("Nombre de traces : " + lesTraces.size());
+		// affichage de tous les utilisateurs
+		for (Trace uneTrace : lesTraces)
+		{	System.out.println(uneTrace.toString());
+		}
+
+	}
 	
 } // fin du test
