@@ -306,7 +306,7 @@ public class PasserelleServicesWebXML extends PasserelleXML {
 		String reponse = "";
 		try
 		{	// création d'un nouveau document XML à partir de l'URL du service web et des paramètres
-			String urlDuServiceWeb = _adresseHebergeur + _urlGetTousLesUtilisateurs;
+			String urlDuServiceWeb = _adresseHebergeur + _urlGetLesUtilisateursQueJautorise;
 			urlDuServiceWeb += "?pseudo=" + pseudo;
 			urlDuServiceWeb += "&mdpSha1=" + mdpSha1;
 
@@ -467,8 +467,8 @@ public class PasserelleServicesWebXML extends PasserelleXML {
 			String urlDuServiceWeb = _adresseHebergeur + _urlEnvoyerPosition;
 			urlDuServiceWeb += "?pseudo=" + pseudo;
 			urlDuServiceWeb += "&mdpSha1=" + mdpSha1;
-			urlDuServiceWeb += "&lePoint=" + lePoint.getId();
-			urlDuServiceWeb += "&dateHeure=" + lePoint.getDateHeure();
+			urlDuServiceWeb += "&idTrace=" + lePoint.getIdTrace();
+			urlDuServiceWeb += "&dateHeure=" + Outils.formaterDateHeureUS(lePoint.getDateHeure()).replace(" ", "%20");
 			urlDuServiceWeb += "&latitude=" + lePoint.getLatitude();
 			urlDuServiceWeb += "&longitude=" + lePoint.getLongitude();
 			urlDuServiceWeb += "&altitude=" + lePoint.getAltitude();
@@ -540,7 +540,7 @@ public class PasserelleServicesWebXML extends PasserelleXML {
 		String reponse = "";
 		try
 		{	// création d'un nouveau document XML à partir de l'URL du service web et des paramètres
-			String urlDuServiceWeb = _adresseHebergeur + _urlGetUnParcoursEtSesPoints;
+			String urlDuServiceWeb = _adresseHebergeur + _urlGetLesParcoursDunUtilisateur;
 			urlDuServiceWeb += "?pseudo=" + pseudo;
 			urlDuServiceWeb += "&mdpSha1=" + mdpSha1;
 			urlDuServiceWeb += "&pseudoConsulte=" + pseudoConsulte;

@@ -16,8 +16,18 @@ public class TestPasserelleServicesWebXML {
 		
 		String msg;
 	
-		// test visuel de la méthode getTousLesUtilisateurs
-		
+//		// test visuel de la méthode getTousLesUtilisateurs
+//		ArrayList<Utilisateur> lesUtilisateurs = new ArrayList<Utilisateur>();
+//		msg = PasserelleServicesWebXML.getTousLesUtilisateurs("europa", Outils.sha1("mdputilisateur"), lesUtilisateurs);
+//		// affichage de la réponse
+//		System.out.println(msg);
+//		// affichage du nombre d'utilisateurs
+//		System.out.println("Nombre d'utilisateurs : " + lesUtilisateurs.size());
+//		// affichage de tous les utilisateurs
+//		for (Utilisateur unUtilisateur : lesUtilisateurs)
+//		{	System.out.println(unUtilisateur.toString());
+//		}
+
 
 		// test visuel de la méthode getLesUtilisateursQueJautorise
 		
@@ -34,24 +44,31 @@ public class TestPasserelleServicesWebXML {
 //		{	System.out.println(unUtilisateur.toString());
 //		}
 
-		// test visuel de la méthode getLesUtilisateursQuiMautorisent
-		ArrayList<Utilisateur> lesUtilisateurs = new ArrayList<Utilisateur>();
-		msg = PasserelleServicesWebXML.getLesUtilisateursQuiMautorisent("europa", Outils.sha1("mdputilisateur"), lesUtilisateurs);
-		// affichage de la réponse
-		System.out.println(msg);
-		// affichage du nombre d'utilisateurs
-		System.out.println("Nombre d'utilisateurs : " + lesUtilisateurs.size());
-		// affichage de tous les utilisateurs
-		for (Utilisateur unUtilisateur : lesUtilisateurs)
-		{	System.out.println(unUtilisateur.toString());
-		}
+//		// test visuel de la méthode getLesUtilisateursQuiMautorisent
+//		ArrayList<Utilisateur> lesUtilisateurs = new ArrayList<Utilisateur>();
+//		msg = PasserelleServicesWebXML.getLesUtilisateursQuiMautorisent("europa", Outils.sha1("mdputilisateur"), lesUtilisateurs);
+//		// affichage de la réponse
+//		System.out.println(msg);
+//		// affichage du nombre d'utilisateurs
+//		System.out.println("Nombre d'utilisateurs : " + lesUtilisateurs.size());
+//		// affichage de tous les utilisateurs
+//		for (Utilisateur unUtilisateur : lesUtilisateurs)
+//		{	System.out.println(unUtilisateur.toString());
+//		}
 
 		
 		// test visuel de la méthode getLesParcoursDunUtilisateur
 
 		
 		// test visuel de la méthode getUnParcoursEtSesPoints
-
+		
+		
+		// test visuel de la méthode envoyerPosition
+//		Date laDate = Outils.convertirEnDateHeure("24/01/2018 13:42:21");
+//		
+//		PointDeTrace lePoint = new PointDeTrace(26, 0, 48.15, -1.68, 50, laDate, 80);
+//		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
+//		System.out.println(msg);
 	
 	} // fin Main
 } // fin class

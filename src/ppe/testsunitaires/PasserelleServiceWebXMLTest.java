@@ -171,9 +171,9 @@ public class PasserelleServiceWebXMLTest {
 	
 	@Test
 	public void testEnvoyerPosition() throws ParseException {
-	Date laDate = Outils.convertirEnDateHeure("24/01/2018 13:42:21");
+		Date laDate = Outils.convertirEnDateHeure("24/01/2018 13:42:21");
 		
-		PointDeTrace lePoint = new PointDeTrace(23, 0, 48.15, -1.68, 50, laDate, 80);
+		PointDeTrace lePoint = new PointDeTrace(26, 0, 48.15, -1.68, 50, laDate, 80);
 		String msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateurrrrrr"), lePoint);
 		assertEquals("Erreur : authentification incorrecte.", msg);
 		
@@ -181,7 +181,7 @@ public class PasserelleServiceWebXMLTest {
 		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
 		assertEquals("Erreur : le numéro de trace n'existe pas.", msg);
 		
-		lePoint = new PointDeTrace(22, 0, 48.15, -1.68, 50, laDate, 80);
+		lePoint = new PointDeTrace(21, 0, 48.15, -1.68, 50, laDate, 80);
 		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
 		assertEquals("Erreur : le numéro de trace ne correspond pas à cet utilisateur.", msg);	
 		
