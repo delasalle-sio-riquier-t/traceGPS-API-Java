@@ -169,26 +169,26 @@ public class PasserelleServiceWebXMLTest {
 //		}
 //	}
 	
-//	@Test
-//	public void testEnvoyerPosition() throws ParseException {
-//	Date laDate = Outils.convertirEnDateHeure("24/01/2018 13:42:21");
-//		
-//		PointDeTrace lePoint = new PointDeTrace(23, 0, 48.15, -1.68, 50, laDate, 80);
-//		String msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateurrrrrr"), lePoint);
-//		assertEquals("Erreur : authentification incorrecte.", msg);
-//		
-//		lePoint = new PointDeTrace(2333, 0, 48.15, -1.68, 50, laDate, 80);
-//		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
-//		assertEquals("Erreur : le numéro de trace n'existe pas.", msg);
-//		
-//		lePoint = new PointDeTrace(22, 0, 48.15, -1.68, 50, laDate, 80);
-//		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
-//		assertEquals("Erreur : le numéro de trace ne correspond pas à cet utilisateur.", msg);	
-//		
-//		lePoint = new PointDeTrace(4, 0, 48.15, -1.68, 50, laDate, 80);
-//		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
-//		assertEquals("Point créé.", msg);	
-//	}
+	@Test
+	public void testEnvoyerPosition() throws ParseException {
+	Date laDate = Outils.convertirEnDateHeure("24/01/2018 13:42:21");
+		
+		PointDeTrace lePoint = new PointDeTrace(23, 0, 48.15, -1.68, 50, laDate, 80);
+		String msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateurrrrrr"), lePoint);
+		assertEquals("Erreur : authentification incorrecte.", msg);
+		
+		lePoint = new PointDeTrace(2333, 0, 48.15, -1.68, 50, laDate, 80);
+		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
+		assertEquals("Erreur : le numéro de trace n'existe pas.", msg);
+		
+		lePoint = new PointDeTrace(22, 0, 48.15, -1.68, 50, laDate, 80);
+		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
+		assertEquals("Erreur : le numéro de trace ne correspond pas à cet utilisateur.", msg);	
+		
+		lePoint = new PointDeTrace(4, 0, 48.15, -1.68, 50, laDate, 80);
+		msg = PasserelleServicesWebXML.envoyerPosition("europa", Outils.sha1("mdputilisateur"), lePoint);
+		assertEquals("Point créé.", msg);	
+	}
 
 
 
